@@ -5,7 +5,7 @@ Blackjack is a card game typically played at casinos where each player competes 
 
 This project implements 5 major classes: Card, Deck, PlayerHand, Shuffle, and Blackjack. 
 
-1) CARDS CLASS:
+## 1) CARDS CLASS:
 
 This implements a class of object that represent an individual card of a standard 52-Playing Card deck. This class has 3 instance attributes:
   - RANK : The possible values range from 2-10 (inclusive both ends) and include "A" (for Ace), "J" (for Jack), "Q" (for Queen), and "K" (for King).
@@ -29,7 +29,7 @@ Examples of printed out cards:
         
  This class also implements the 'COMPARE()' method that allows us to compare the ranks (and/or suits) of 2 different cards.
         
-2) PLAYERHAND & DEALERHAND CLASSES:
+## 2) PLAYERHAND & DEALERHAND CLASSES:
 
 This implements the Playerhand Class which is later inherited by the Dealerhand class. In Blackjack, the difference between Dealer and Player is that all the cards in a player's hand are visible to the player whereas only the first card in a dealer's hand is visible
 These class implement methods like:
@@ -40,20 +40,20 @@ These class implement methods like:
   
   Dealer Hand has a few of these methods implemented differently to accomodate the special role of the dealer in BlackJack
   
-3) SHUFFLE CLASS:
+## 3) SHUFFLE CLASS:
 This class shuffles the cards in a given hand. It implements 2 kinds of Shuffle methods:
  
    -MODIFIED_OVERHAND() Shuffling: In this method, a number 'N' cards are taken from the middle of the deck and put on the top of the deck. Then, (N- 1) cards from the middle of the deck are put on the top of the deck. This process is repreated N times
    -MONGEAN() Shuffling: In this method, the deck is split into 2 'hands' and alternating cards from the top and bottom of each hand are switched repeatedly untill all cards have been split.The 2 are then joined This function is implemented using recursion. 
 
-4) DECK CLASS:
+## 4) DECK CLASS:
 This class implements the previous 3 classes by incorporating CARDS, PLAYER & DEALER HANDS with SHUFFLE to create a complte deck of 52 cards, ranked in ascending order of rank and suit
 It implements the following methods:
 
   - DEAL_HAND(): Takes the first card from the deck and adds it to the given hand. If it is dealt to a Player hand, the card is dealt in ascending order of rank
   - SHUFFLE(): This shuffles a deck of 52 cards. This takes in 2 parameters of (1)Type of Shuffle, i.e- Mongean or Overhand , as well (2) N: the number of cards/times the shuffle takes place
 
-5) PLAY_BLACKJACK:
+## 5) PLAY_BLACKJACK:
 This class combines the methods and implementation discussed in the previous classes while also introducing some new methods like (1) Betting ,(2) Scoring to determine the winner of a given round as per the ruules of Blackjack.
 It also writes a 'Summary' .txt file of every hand played in a given round so as to calculate the scores and bets of each player. This class implements numerous methods.
 Some of which are:
